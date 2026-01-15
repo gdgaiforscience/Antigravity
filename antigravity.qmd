@@ -1,0 +1,33 @@
+---
+title: '**Antigravity for scientific acceleration **'
+format:
+  html:
+    code-overflow: wrap
+execute: 
+  output: false
+---
+
+This workshop will introduce the use of Large Language Models (LLMs) directly within your R environment. We will explore three packages from the tidyverse/mlverse ecosystem: [`ellmer`](https://ellmer.tidyverse.org/) for direct interaction with LLMs, [`ragnar`](https://ragnar.tidyverse.org) for building Retrieval-Augmented Generation (RAG) workflows, and [`chattr`](https://mlverse.github.io/chattr/) for RStudio context integration. 
+
+**Prerequisites:**
+
+-   Basic knowledge of R and the RStudio IDE.
+
+[![ ](./aiforsci.png)](https://gdg.community.dev/gdg-ai-for-science-australia/)
+
+This workshop is part of the [GDG AI for Science](https://gdg.community.dev/gdg-ai-for-science-australia/) workshop series. Join the community for talks, events, collaborations and more.
+
+
+## **Installation and Setup**
+
+-   Install the [`ellmer`](https://ellmer.tidyverse.org/),[`ragnar`](https://ragnar.tidyverse.org), and [`chattr`](https://mlverse.github.io/chattr/) package from CRAN as below. *ragnar* may take up to about 1 hour to install. 
+
+-   Set up API keys from https://aistudio.google.com/ or equivalent.
+```{r}
+#Sys.setenv(GEMINI_API_KEY = "xxxx")
+```
+-   *Optional* - Setup local LLM with Ollama
+    -   Download [Ollama](https://ollama.com/download) and install it
+    -   Pull a local model: `ollama pull gemma3:270m-it-qat`
+    -   See [Gemma with Ollama](https://ai.google.dev/gemma/docs/integrations/ollama) docs for more info. 
+
