@@ -3,6 +3,7 @@ title: '**Antigravity for Science **'
 format:
   html:
     code-overflow: wrap
+output-file: index.html
 execute: 
   output: false
 ---
