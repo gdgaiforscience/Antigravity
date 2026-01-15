@@ -3,6 +3,8 @@ title: '**Antigravity for Science **'
 format:
   html:
     code-overflow: wrap
+    code-block-bg: "#f0f0f0"   # Light grey background
+    code-block-border-left: "#31baE9" 
 output-file: index.html
 execute: 
   output: false
@@ -37,6 +39,11 @@ Before the session please download and install Antigravity for your system by fo
 
 This workshop is part of the [GDG AI for Science](https://gdg.community.dev/gdg-ai-for-science-australia/) workshop series. Join the community for talks, events, collaborations and more.
 
+```{bash}
+#| filename: "terminal"
+echo "Hello, World!"
+ls -la
+```
 
 ## First prompt
 
@@ -95,6 +102,7 @@ It has a bunch of built in tools. You could be helpful and put the pdf into the 
 ```{bash}
 Recreate the Fig 1 from the paper https://www.nature.com/articles/s41586-025-09840-z
 ```
+
 
 
 # Final thoughts
