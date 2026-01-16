@@ -8,7 +8,6 @@ format:
 output-file: index.html
 execute: 
   output: false
-  eval: false
 ---
 
 Google’s new code editor, **Antigravity**, is an AI-assisted IDE (Integrated Development Environment) with native agentic and generative AI capabilities built into the platform to rapidly accelerate computational and data driven development and scientific research. Antigravity is built on top of the Visual Studio Code editor for a familiar but accelerated user experience. The embedded agentic assistance allows users to spend more time solving research problems and less time debugging problematic code. This workshop is designed for researchers of all coding skill levels. We will walk through simple, research-grounded examples to help you fit the Antigravity framework immediately to your own projects. 
@@ -40,8 +39,9 @@ Before the session please download and install Antigravity for your system by fo
 
 This workshop is part of the [GDG AI for Science](https://gdg.community.dev/gdg-ai-for-science-australia/) workshop series. Join the community for talks, events, collaborations and more.
 
-```bash {filename="terminal"}
-echo "Hello"
+```bash
+#| filename: "terminal"
+echo "Hello, World!"
 ls -la
 ```
 
