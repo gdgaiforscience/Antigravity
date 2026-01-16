@@ -40,67 +40,66 @@ Before the session please download and install Antigravity for your system by fo
 
 This workshop is part of the [GDG AI for Science](https://gdg.community.dev/gdg-ai-for-science-australia/) workshop series. Join the community for talks, events, collaborations and more.
 
-```{bash}
-#| filename: "terminal"
-echo "Hello, World!"
+```bash filename="terminal"
+echo "Hello"
 ls -la
 ```
 
 ## First prompt
 
 You can immediately get started with a prompt in the Agent Manager sidebar or window
-```{bash}
+```bash
 Your goal is show if temperature has changed in Sydney, Australia.
 ```
 
 Keep the conversation going, now it has developed more context:
-```{bash}
+```bash
 Your goal is to prove this using data and code
 ```
 
 Make sure you have tools (like Python) installed and the correct environments are being used. Put comments into the generated artefacts to give it helpful context hints:
-```{bash}
+```bash
 run the tests in conda environment oztemp
 ```
 
 Keep the agent working with more complex tasks:
-```{bash}
+```bash
 Please extend this to make animated heatmap of Australia's Annual Mean Max Temperature
 ```
 
 ## Working with your data
 Whilst you can start from scratch to develop a complete workflow, likely you will already have some bones of a repo. Let's create a new project folder with some data and get Antigravity to work with that context:
-```{bash}
+```bash
 mkdir demofaces
 cd demofaces
 curl -L -o human-face-emotions.zip\  https://www.kaggle.com/api/v1/datasets/download/samithsachidanandan/human-face-emotions
 unzip human-face-emotions.zip
 ```
 Now give it a prompt:
-```{bash}
+```bash
 Write a TensorFlow model to classify the images of facial expressions in the Data folder into 5 classes based on the sub-folder names (Angry, Fear, Happy, Sad, Surprise)
 ```
 
 ## Updating exisitng code
 You may have been given some code or pulled it from a paper. You need to refactor it to run on your data or a high performance computing cluster
 
-```{bash}
+```bash
 cd EXAMPLES//BIO
 ```
 Ask about the code:
-```{bash}
+```bash
 What does this code do? Can you make my code run faster on my laptop?
 ```
 
 Now parallelise it! And get the methodology for running it.
-```{bash}
+```bash
 Use the conda environment "bio" for any python processing
 I have been given access to the NCI HPC, how do I run this on many fastq files on that machine?
 ```
 
 ## Reproduce other results
 It has a bunch of built in tools. You could be helpful and put the pdf into the file or make it do all the work:
-```{bash}
+```bash
 Recreate the Fig 1 from the paper https://www.nature.com/articles/s41586-025-09840-z
 ```
 
