@@ -14,3 +14,4 @@ quarto render antigravity.qmd
 git commit -am "New build"
 git push
 ```
+quarto publish gh-pages antigravity.qmd 
