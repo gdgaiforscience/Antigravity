@@ -39,8 +39,7 @@ Before the session please download and install Antigravity for your system by fo
 
 This workshop is part of the [GDG AI for Science](https://gdg.community.dev/gdg-ai-for-science-australia/) workshop series. Join the community for talks, events, collaborations and more.
 
-```bash
-#| filename: "terminal"
+```bash {filename: "terminal"}
 echo "Hello, World!"
 ls -la
 ```
