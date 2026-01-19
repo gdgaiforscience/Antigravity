@@ -70,6 +70,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="antigravity_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="antigravity_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="antigravity_files/libs/bootstrap/bootstrap-b210850eabbc70175c4519c79abba984.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<style>
+  /* Define the raw bash class */
+  .raw pre.sourceCode {
+    border-left-color: #A020F0 ;
+    background-color: #B9B9B9 !important;
+  }
+  raw pre.sourceCode code {
+    color: #d670d6 !important;               /* Light Purple Text */
+  }
+</style>
 
 
 </head>
@@ -99,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Google’s new code editor, <strong>Antigravity</strong>, is an AI-assisted IDE (Integrated Development Environment) with native agentic and generative AI capabilities built into the platform to rapidly accelerate computational and data driven development and scientific research. Antigravity is built on top of the Visual Studio Code editor for a familiar but accelerated user experience. The embedded agentic assistance allows users to spend more time solving research problems and less time debugging problematic code. This workshop is designed for researchers of all coding skill levels. We will walk through simple, research-grounded examples to help you fit the Antigravity framework immediately to your own projects.</p>
+<p>Google’s new code editor, <a href="https://antigravity.google/"><strong>Antigravity</strong></a>, is an AI-assisted IDE (Integrated Development Environment) with native agentic and generative AI capabilities built into the platform to rapidly accelerate computational and data driven development and scientific research. Antigravity is built on top of the Visual Studio Code editor for a familiar but accelerated user experience. The embedded agentic assistance allows users to spend more time solving research problems and less time debugging problematic code. This workshop is designed for researchers of all coding skill levels. We will walk through simple, research-grounded examples to help you fit the Antigravity framework immediately to your own projects.</p>
 <p>Learn how to use Antigravity to:</p>
 <ul>
 <li>Automatically visualise and explore your datasets.</li>
@@ -107,6 +117,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Refactor code to execute efficiently on HPC environments or similar.</li>
 <li>Produce machine learning pipelines that immediately fit your research problems.</li>
 </ul>
+<p><img src="./aiforsci.png" class="img-fluid"></p>
+<p>This workshop is part of the <a href="https://gdg.community.dev/events/details/google-gdg-ai-for-science-india-presents-googles-antigravity-accelerating-research-and-scientific-pipelines">GDG AI for Science</a> workshop series. Join the community (in <a href="https://gdg.community.dev/gdg-ai-for-science-australia/">Australia</a>, <a href="https://gdg.community.dev/gdg-ai-for-science-korea/">Korea</a>, <a href="https://gdg.community.dev/gdg-ai-for-science-japan">Japan</a>, or <a href="https://gdg.community.dev/gdg-ai-for-science-india/">India</a>) for talks, events, collaborations and more.</p>
 <section id="target-audience" class="level2">
 <h2 class="anchored" data-anchor-id="target-audience">Target Audience</h2>
 <p>This workshop is aimed at anyone that writes code for scientific research including:</p>
@@ -125,8 +137,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>A motivation to experiment</li>
 <li>Familiarity with Visual Studio Code editor will be helpful otherwise this will be a crash-course</li>
 </ul>
-<p><a href="https://gdg.community.dev/gdg-ai-for-science-india/"><img src="./aiforsci.png" class="img-fluid"></a></p>
-<p>This workshop is part of the <a href="https://gdg.community.dev/gdg-ai-for-science-india/">GDG AI for Science</a> workshop series. Join the community (in <a href="https://gdg.community.dev/gdg-ai-for-science-australia/">Australia</a>, <a href="https://gdg.community.dev/gdg-ai-for-science-korea/">Korea</a>, <a href="https://gdg.community.dev/gdg-ai-for-science-japan">Japan</a>, and <a href="https://gdg.community.dev/gdg-ai-for-science-india/">India</a> for talks, events, collaborations and more.</p>
 </section>
 <section id="welcome-to-antigravity" class="level1">
 <h1>Welcome to Antigravity</h1>
@@ -145,34 +155,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="example-2-working-with-your-data" class="level2">
 <h2 class="anchored" data-anchor-id="example-2-working-with-your-data">Example 2: Working with your data</h2>
-<p>Whilst you can start from scratch to develop a complete workflow, likely you will already have some bones of a repo. Let’s create a new project folder with some data and get Antigravity to work with that context: <code>bash {filename: "terminal"} mkdir demofaces cd demofaces curl -L -o human-face-emotions.zip\  https://www.kaggle.com/api/v1/datasets/download/samithsachidanandan/human-face-emotions unzip human-face-emotions.zip</code> Now give it a prompt:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Write</span> a TensorFlow model to classify the images of facial expressions in the Data folder into 5 classes based on the sub-folder names <span class="er">(</span><span class="ex">Angry,</span> Fear, Happy, Sad, Surprise<span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Whilst you can start from scratch to develop a complete workflow, likely you will already have some bones of a repo. Let’s create a new project folder with some data and get Antigravity to work with that context:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash raw code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> demofaces</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> demofaces</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> <span class="at">-o</span> human-face-emotions.zip<span class="dt">\ </span> https://www.kaggle.com/api/v1/datasets/download/samithsachidanandan/human-face-emotions</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> human-face-emotions.zip</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now give it a prompt:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Write</span> a TensorFlow model to classify the images of facial expressions in the Data folder into 5 classes based on the sub-folder names <span class="er">(</span><span class="ex">Angry,</span> Fear, Happy, Sad, Surprise<span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="example-3-updating-existing-code" class="level2">
 <h2 class="anchored" data-anchor-id="example-3-updating-existing-code">Example 3: Updating existing code</h2>
 <p>You may have been given some code or pulled it from a paper. You need to refactor it to run on your data or a high performance computing cluster. Download the <a href="https://raw.githubusercontent.com/gdgaiforscience/Antigravity/refs/heads/main/EXAMPLES/BIO/kmer_single.py">example script</a> or navigate through the repo.</p>
-<p><code>bash {filename: "terminal"} cd EXAMPLES/BIO</code> Ask about the code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">What</span> does this code do<span class="pp">?</span> Can you make my code run faster on my laptop<span class="pp">?</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash raw code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> EXAMPLES/BIO</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ask about the code:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">What</span> does this code do<span class="pp">?</span> Can you make my code run faster on my laptop<span class="pp">?</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now parallelise it! And get the methodology for running it.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Use</span> the conda environment <span class="st">"bio"</span> for any python processing</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">I</span> have been given access to the NCI HPC, how do I run this on many fastq files on that machine<span class="pp">?</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Use</span> the conda environment <span class="st">"bio"</span> for any python processing</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">I</span> have been given access to the NCI HPC, how do I run this on many fastq files on that machine<span class="pp">?</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="example-4-reproduce-results" class="level2">
 <h2 class="anchored" data-anchor-id="example-4-reproduce-results">Example 4: Reproduce results</h2>
 <p>Antigravity has a bunch of built in tools that will work for you. In this example we will ask it to recreate a figure from a paper. You could be helpful and put the pdf or figure into a file, or make it do all the work with a prompt like:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Recreate</span> the Fig 1 from the paper at https://www.nature.com/articles/s41586-025-09840-z</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Recreate</span> the Fig 1 from the paper at https://www.nature.com/articles/s41586-025-09840-z</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="example-5-multi-agent-orchestration" class="level2">
 <h2 class="anchored" data-anchor-id="example-5-multi-agent-orchestration">Example 5: Multi-agent orchestration</h2>
 <p>From the <em>Agent Manager</em> you can launch multiple agents to work on different parts of a problem concurrently. But let’s hand complete control to the Agent, set it running and go and get a cup of coffee. Start new conversation in…</p>
 <p>Prompt 1:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">I</span> want to prove or disprove the correlation between earthquakes and Lunar cycles. Write a literature review with extensive referencing on this topic.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">I</span> want to prove or disprove the correlation between earthquakes and Lunar cycles. Write a literature review with extensive referencing on this topic.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Prompt 2:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Pull</span> the required data and setup the project to to prove or disprove the correlation between earthquakes and Lunar cycles. </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Pull</span> the required data and setup the project to to prove or disprove the correlation between earthquakes and Lunar cycles. </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Prompt 3:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Write</span> the code to prove or disprove the correlation between earthquakes and Lunar cycles.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Write</span> the code to prove or disprove the correlation between earthquakes and Lunar cycles.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Prompt 4:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Write</span> the conclusion based on the data and review about the link between Earthquakes and Lunar cycles</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Write</span> the conclusion based on the data and review about the link between Earthquakes and Lunar cycles</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="final-thoughts" class="level1">
