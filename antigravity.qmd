@@ -5,12 +5,24 @@ format:
     code-overflow: wrap
     code-block-bg: "#f0f0f0"   # Light grey background
     code-block-border-left: "#31baE9" 
+    include-in-header:
+      text: |
+        <style>
+          /* Define the raw bash class */
+          .raw pre.sourceCode {
+            border-left-color: #A020F0 ;
+            background-color: #B9B9B9 !important;
+          }
+          raw pre.sourceCode code {
+            color: #d670d6 !important;               /* Light Purple Text */
+          }
+        </style>
 output-file: index.html
 execute: 
   output: false
 ---
 
-Google’s new code editor, **Antigravity**, is an AI-assisted IDE (Integrated Development Environment) with native agentic and generative AI capabilities built into the platform to rapidly accelerate computational and data driven development and scientific research. Antigravity is built on top of the Visual Studio Code editor for a familiar but accelerated user experience. The embedded agentic assistance allows users to spend more time solving research problems and less time debugging problematic code. This workshop is designed for researchers of all coding skill levels. We will walk through simple, research-grounded examples to help you fit the Antigravity framework immediately to your own projects. 
+Google’s new code editor, [**Antigravity**](https://antigravity.google/), is an AI-assisted IDE (Integrated Development Environment) with native agentic and generative AI capabilities built into the platform to rapidly accelerate computational and data driven development and scientific research. Antigravity is built on top of the Visual Studio Code editor for a familiar but accelerated user experience. The embedded agentic assistance allows users to spend more time solving research problems and less time debugging problematic code. This workshop is designed for researchers of all coding skill levels. We will walk through simple, research-grounded examples to help you fit the Antigravity framework immediately to your own projects. 
 
 Learn how to use Antigravity to:
 
@@ -18,6 +30,11 @@ Learn how to use Antigravity to:
 * Wrangle and clean your data “instantly”.
 * Refactor code to execute efficiently on HPC environments or similar.
 * Produce machine learning pipelines that immediately fit your research problems.
+
+![ ](./aiforsci.png)
+
+This workshop is part of the [GDG AI for Science](https://gdg.community.dev/events/details/google-gdg-ai-for-science-india-presents-googles-antigravity-accelerating-research-and-scientific-pipelines) workshop series. Join the community (in [Australia](https://gdg.community.dev/gdg-ai-for-science-australia/), [Korea](https://gdg.community.dev/gdg-ai-for-science-korea/), [Japan](https://gdg.community.dev/gdg-ai-for-science-japan), or [India](https://gdg.community.dev/gdg-ai-for-science-india/)) for talks, events, collaborations and more.
+
 
 ## Target Audience
 This workshop is aimed at anyone that writes code for scientific research including:
@@ -35,9 +52,6 @@ Before the session please download and install Antigravity for your system by fo
 - A motivation to experiment
 - Familiarity with Visual Studio Code editor will be helpful otherwise this will be a crash-course
 
-[![ ](./aiforsci.png)](https://gdg.community.dev/gdg-ai-for-science-india/)
-
-This workshop is part of the [GDG AI for Science](https://gdg.community.dev/gdg-ai-for-science-india/) workshop series. Join the community (in [Australia](https://gdg.community.dev/gdg-ai-for-science-australia/), [Korea](https://gdg.community.dev/gdg-ai-for-science-korea/), [Japan](https://gdg.community.dev/gdg-ai-for-science-japan), and [India](https://gdg.community.dev/gdg-ai-for-science-india/) for talks, events, collaborations and more.
 
 
 # Welcome to Antigravity
@@ -72,7 +86,7 @@ Please extend this to make an animated heatmap of Australia's Annual Mean Max Te
 
 ## Example 2: Working with your data
 Whilst you can start from scratch to develop a complete workflow, likely you will already have some bones of a repo. Let's create a new project folder with some data and get Antigravity to work with that context:
-```bash {filename: "terminal"}
+```bash {.raw}
 mkdir demofaces
 cd demofaces
 curl -L -o human-face-emotions.zip\  https://www.kaggle.com/api/v1/datasets/download/samithsachidanandan/human-face-emotions
@@ -86,7 +100,7 @@ Write a TensorFlow model to classify the images of facial expressions in the Dat
 ## Example 3: Updating existing code
 You may have been given some code or pulled it from a paper. You need to refactor it to run on your data or a high performance computing cluster. Download the [example script](https://raw.githubusercontent.com/gdgaiforscience/Antigravity/refs/heads/main/EXAMPLES/BIO/kmer_single.py) or navigate through the repo.
 
-```bash {filename: "terminal"}
+```bash {.raw}
 cd EXAMPLES/BIO
 ```
 Ask about the code:
