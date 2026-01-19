@@ -75,7 +75,7 @@ Please extend this to make an animated heatmap of Australia's Annual Mean Max Te
 
 ## Example 2: Working with your data
 Whilst you can start from scratch to develop a complete workflow, likely you will already have some bones of a repo. Let's create a new project folder with some data and get Antigravity to work with that context:
-```
+```python
 mkdir demofaces
 cd demofaces
 curl -L -o human-face-emotions.zip\  https://www.kaggle.com/api/v1/datasets/download/samithsachidanandan/human-face-emotions
@@ -89,7 +89,7 @@ Write a TensorFlow model to classify the images of facial expressions in the Dat
 ## Example 3: Updating existing code
 You may have been given some code or pulled it from a paper. You need to refactor it to run on your data or a high performance computing cluster. Download the [example script](https://raw.githubusercontent.com/gdgaiforscience/Antigravity/refs/heads/main/EXAMPLES/BIO/kmer_single.py) or navigate through the repo.
 
-```bash 
+```python 
 cd EXAMPLES/BIO
 ```
 Ask about the code:
@@ -134,8 +134,19 @@ Write the conclusion based on the data and review about the link between Earthqu
 
 * To get the best results from an agentic IDE, it can be helpful to move from instructional prompting ("do this") to architectural prompting ("build a system that functions like this"). You don't have to be the developer or the project manager, rather think of yourself as the agent orchestration engineer!
 
-* Be somewhat careful with permissions you give Antigravity. It is very powerful and it can delete things! 
+* Try using the Gemini chat interface to make your prompts more strategic, for example you can use this meta-prompt: 
+```
+# Role
+You are a Lead Prompt Engineer specializing in Google's Antigravity IDE and it's agentic capabilities. Your goal is to write a high-fidelity, instruction-dense prompt that will force Antigravity Agents to utilize their maximum reasoning depth and agentic research tools. 
+# Task
+Write a well-crafted and optimal prompt for input into the Antigravity so the returned output perfectly answers the following query: 
+"[INSERT QUESTION/TOPIC HERE]"
+```
 
-* Experiment and see what works best for you, and share it with the rest of us!
+* Read the generated artefacts and make changes that suit your needs
+
+* Be somewhat careful with permissions you give Antigravity. It is very powerful and it can delete things! Browse through the options and think.
+
+* Experiment and see what works best for you - and share it with the rest of us!
 
 * Explore using different models for different phases of your workflow, some models are better at different tasks.
