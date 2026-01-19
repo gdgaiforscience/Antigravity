@@ -9,12 +9,12 @@ format:
       text: |
         <style>
           /* Define the raw bash class */
-          .raw pre.sourceCode {
-            border-left-color: #A020F0 ;
-            background-color: #B9B9B9 ;
+          div.sourceCode.raw {
+            border-left-color: #A020F0 !important;
+            background-color: #B9B9B9 !important;
           }
-          .raw pre.sourceCode code {
-            color: #d670d6;        
+          div.sourceCode.raw code {
+            color: #d670d6 !important;      
           }
         </style>
 output-file: index.html
