@@ -31,27 +31,31 @@ Before the session please download and install Antigravity for your system by fo
 
 **Prerequisites:**
 
-- Basic coding knoledge will be helpful.
+- Basic coding knowledge will be helpful.
 - A motivation to experiment
-- Familiarity with Visual Studio Code editor would be helpful otherwise this will be a crash-course
+- Familiarity with Visual Studio Code editor will be helpful otherwise this will be a crash-course
 
-[![ ](./aiforsci.png)](https://gdg.community.dev/gdg-ai-for-science-australia/)
+[![ ](./aiforsci.png)](https://gdg.community.dev/gdg-ai-for-science-india/)
 
-This workshop is part of the [GDG AI for Science](https://gdg.community.dev/gdg-ai-for-science-australia/) workshop series. Join the community for talks, events, collaborations and more.
+This workshop is part of the [GDG AI for Science](https://gdg.community.dev/gdg-ai-for-science-india/) workshop series. Join the community (in [Australia](https://gdg.community.dev/gdg-ai-for-science-australia/), [Korea](https://gdg.community.dev/gdg-ai-for-science-korea/), [Japan](https://gdg.community.dev/gdg-ai-for-science-japan), and [India](https://gdg.community.dev/gdg-ai-for-science-india/) for talks, events, collaborations and more.
 
-```bash {filename: "terminal"}
-echo "Hello, World!"
-ls -la
-```
 
-## First prompt
+# Welcome to Antigravity
+
+After installation, the first time you launch Antigravity you will answer a few basic configuration steps (all options can be be left as default and changed later) then you will have to login with your Google credentials. You can also change user-accounts later if needed.
+From there you will land in the VSCode IDE, and can open a Folder/Project immediately starting hacking!
+
+We will run through a few different examples for how you can use Antigravity.
+
+
+## Example 1: First prompt
 
 You can immediately get started with a prompt in the Agent Manager sidebar or window
 ```bash
-Your goal is show if temperature has changed in Sydney, Australia.
+Your goal is to show if temperature has changed in Sydney, Australia.
 ```
 
-Keep the conversation going, now it has developed more context:
+Keep the conversation going now it has developed more context:
 ```bash
 Your goal is to prove this using data and code
 ```
@@ -63,12 +67,12 @@ run the tests in conda environment oztemp
 
 Keep the agent working with more complex tasks:
 ```bash
-Please extend this to make animated heatmap of Australia's Annual Mean Max Temperature
+Please extend this to make an animated heatmap of Australia's Annual Mean Max Temperature
 ```
 
-## Working with your data
+## Example 2: Working with your data
 Whilst you can start from scratch to develop a complete workflow, likely you will already have some bones of a repo. Let's create a new project folder with some data and get Antigravity to work with that context:
-```bash
+```bash {filename: "terminal"}
 mkdir demofaces
 cd demofaces
 curl -L -o human-face-emotions.zip\  https://www.kaggle.com/api/v1/datasets/download/samithsachidanandan/human-face-emotions
@@ -79,11 +83,11 @@ Now give it a prompt:
 Write a TensorFlow model to classify the images of facial expressions in the Data folder into 5 classes based on the sub-folder names (Angry, Fear, Happy, Sad, Surprise)
 ```
 
-## Updating exisitng code
-You may have been given some code or pulled it from a paper. You need to refactor it to run on your data or a high performance computing cluster
+## Example 3: Updating existing code
+You may have been given some code or pulled it from a paper. You need to refactor it to run on your data or a high performance computing cluster. Download the [example script](https://raw.githubusercontent.com/gdgaiforscience/Antigravity/refs/heads/main/EXAMPLES/BIO/kmer_single.py) or navigate through the repo.
 
-```bash
-cd EXAMPLES//BIO
+```bash {filename: "terminal"}
+cd EXAMPLES/BIO
 ```
 Ask about the code:
 ```bash
@@ -96,21 +100,39 @@ Use the conda environment "bio" for any python processing
 I have been given access to the NCI HPC, how do I run this on many fastq files on that machine?
 ```
 
-## Reproduce other results
-It has a bunch of built in tools. You could be helpful and put the pdf into the file or make it do all the work:
+## Example 4: Reproduce results
+Antigravity has a bunch of built in tools that will work for you. In this example we will ask it to recreate a figure from a paper. You could be helpful and put the pdf or figure into a file, or make it do all the work with a prompt like:
 ```bash
-Recreate the Fig 1 from the paper https://www.nature.com/articles/s41586-025-09840-z
+Recreate the Fig 1 from the paper at https://www.nature.com/articles/s41586-025-09840-z
 ```
 
+## Example 5: Multi-agent orchestration
+From the *Agent Manager* you can launch multiple agents to work on different parts of a problem concurrently. But let's hand complete control to the Agent, set it running and go and get a cup of coffee. Start new conversation in...
+
+Prompt 1:
+```bash
+I want to prove or disprove the correlation between earthquakes and Lunar cycles. Write a literature review with extensive referencing on this topic.
+```
+Prompt 2:
+```bash
+Pull the required data and setup the project to to prove or disprove the correlation between earthquakes and Lunar cycles. 
+```
+Prompt 3:
+```bash
+Write the code to prove or disprove the correlation between earthquakes and Lunar cycles.
+```
+Prompt 4:
+```bash
+Write the conclusion based on the data and review about the link between Earthquakes and Lunar cycles
+```
 
 
 # Final thoughts
 
 * To get the best results from an agentic IDE, it can be helpful to move from instructional prompting ("do this") to architectural prompting ("build a system that functions like this"). You don't have to be the developer or the project manager, rather think of yourself as the agent orchestration engineer!
 
-* Be somewhat careful with permissions you give Antigravity. It is very powerful and it can delete things!
+* Be somewhat careful with permissions you give Antigravity. It is very powerful and it can delete things! 
 
-* Experiement and see what works best for you?
+* Experiment and see what works best for you, and share it with the rest of us!
 
 * Explore using different models for different phases of your workflow, some models are better at different tasks.
-
