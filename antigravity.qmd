@@ -129,6 +129,17 @@ Prompt 4:
 Write the conclusion based on the data and review about the link between Earthquakes and Lunar cycles
 ```
 
+## Example 6: Targeted literature review and summary
+
+```bash
+Perform a systematic search across ArXiv, PubMed, and Semantic Scholar for 'Non-pharmacological interventions for Neuroplasticity (2023-2026)'. Extract the N-values, p-values, and effect sizes from the top 40 relevant papers. Use Python to aggregate this data into a structured CSV. Identify and highlight 'Evidence Contradictions' where two or more papers report conflicting results for the same intervention. Generate a summary identifying the 'consensus gap' and suggest three specific hypotheses for future experimental validation.
+```
+
+## Example 7: Grant writing assitance
+
+```bash
+Read the draft grant proposal in grant_v1.docx. Cross-reference all technical claims in the 'Methodology' section with existing literature using search. Identify any 'Innovation Claims' that are actually already solved in recent 2025 publications. Check the budget section against the proposed computational requirements (e.g., GPU hours for training the specified model) and flag if the requested funds are insufficient. Suggest three peer-reviewed citations that would strengthen the 'Prior Art' section.
+```
 
 # Final thoughts
 
