@@ -1,11 +1,9 @@
 ---
-title: '**Antigravity for Science **'
+title: '**Antigravity for Science**'
 format:
   html:
     code-overflow: wrap
-    code-block-bg: "#f0f0f0"   # Light grey background
-    code-block-border-left: "#31baE9" 
-    css: styles.css  
+    css: styles.css
 output-file: index.html
 execute: 
   output: false
