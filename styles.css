@@ -1,0 +1,21 @@
+/* styles.css */
+
+/* Target the Outer Container (div) 
+   We use !important to override the Quarto YAML defaults 
+   for background and border.
+*/
+div.sourceCode.raw {
+  background-color: #B9B9B9 !important;
+  border-left-color: #A020F0 !important;
+  border-left-style: solid !important; 
+  border-left-width: 5px !important; /* Ensures the border is visible */
+  margin-bottom: 1em; /* Optional: adds spacing after the block */
+}
+
+/* Target the Inner Code Text 
+   This ensures the font color changes inside the raw block.
+*/
+div.sourceCode.raw pre code,
+div.sourceCode.raw pre {
+  color: #d670d6 !important;
+}
