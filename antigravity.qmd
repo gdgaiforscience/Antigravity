@@ -5,18 +5,7 @@ format:
     code-overflow: wrap
     code-block-bg: "#f0f0f0"   # Light grey background
     code-block-border-left: "#31baE9" 
-    include-in-header:
-      text: |
-        <style>
-          /* Define the raw bash class */
-          div.sourceCode.raw {
-            border-left-color: #A020F0 !important;
-            background-color: #B9B9B9 !important;
-          }
-          div.sourceCode.raw code {
-            color: #d670d6 !important;      
-          }
-        </style>
+    css: styles.css  
 output-file: index.html
 execute: 
   output: false
