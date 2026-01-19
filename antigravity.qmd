@@ -4,6 +4,8 @@ format:
   html:
     code-overflow: wrap
     css: styles.css
+resources:        
+  - styles.css
 output-file: index.html
 execute: 
   output: false
