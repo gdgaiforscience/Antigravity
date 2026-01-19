@@ -75,7 +75,7 @@ Please extend this to make an animated heatmap of Australia's Annual Mean Max Te
 
 ## Example 2: Working with your data
 Whilst you can start from scratch to develop a complete workflow, likely you will already have some bones of a repo. Let's create a new project folder with some data and get Antigravity to work with that context:
-```python
+```
 mkdir demofaces
 cd demofaces
 curl -L -o human-face-emotions.zip\  https://www.kaggle.com/api/v1/datasets/download/samithsachidanandan/human-face-emotions
@@ -89,7 +89,7 @@ Write a TensorFlow model to classify the images of facial expressions in the Dat
 ## Example 3: Updating existing code
 You may have been given some code or pulled it from a paper. You need to refactor it to run on your data or a high performance computing cluster. Download the [example script](https://raw.githubusercontent.com/gdgaiforscience/Antigravity/refs/heads/main/EXAMPLES/BIO/kmer_single.py) or navigate through the repo.
 
-```python 
+``` 
 cd EXAMPLES/BIO
 ```
 Ask about the code:
