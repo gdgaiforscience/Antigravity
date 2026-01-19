@@ -1,9 +1,17 @@
 # Antigravity
 Google's Antigravity IDE can supercharge your scientific workflows and pipelines.
 
-Modify `antigravity.qmd` to update the tutorial pages: https://gdgaiforscience.github.io/Antigravity/
+Modify `antigravity.qmd` to update the tutorial pages.
 
-# Setting up this repo for auto-building the github pages site
+Modify `styles.css` and `_quarto.yml` to change the look and feel of the rendered page.
+
+They will be rendered at: https://gdgaiforscience.github.io/Antigravity/
+
+
+
+## Setting up this repo for auto-building the github pages site
+
+FYI, this only has to be done once. And has already been done. Now just fork this repo or use it as a template when making a new page!
 
 Build the workshop files locally with 
 ```
