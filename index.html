@@ -147,17 +147,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="example-2-working-with-your-data" class="level2">
 <h2 class="anchored" data-anchor-id="example-2-working-with-your-data">Example 2: Working with your data</h2>
 <p>Whilst you can start from scratch to develop a complete workflow, likely you will already have some bones of a repo. Let’s create a new project folder with some data and get Antigravity to work with that context:</p>
-<pre><code>mkdir demofaces
-cd demofaces
-curl -L -o human-face-emotions.zip\  https://www.kaggle.com/api/v1/datasets/download/samithsachidanandan/human-face-emotions
-unzip human-face-emotions.zip</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mkdir demofaces</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>cd demofaces</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>curl <span class="op">-</span>L <span class="op">-</span>o human<span class="op">-</span>face<span class="op">-</span>emotions.<span class="bu">zip</span>\  https:<span class="op">//</span>www.kaggle.com<span class="op">/</span>api<span class="op">/</span>v1<span class="op">/</span>datasets<span class="op">/</span>download<span class="op">/</span>samithsachidanandan<span class="op">/</span>human<span class="op">-</span>face<span class="op">-</span>emotions</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>unzip human<span class="op">-</span>face<span class="op">-</span>emotions.<span class="bu">zip</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now give it a prompt:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Write</span> a TensorFlow model to classify the images of facial expressions in the Data folder into 5 classes based on the sub-folder names <span class="er">(</span><span class="ex">Angry,</span> Fear, Happy, Sad, Surprise<span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="example-3-updating-existing-code" class="level2">
 <h2 class="anchored" data-anchor-id="example-3-updating-existing-code">Example 3: Updating existing code</h2>
 <p>You may have been given some code or pulled it from a paper. You need to refactor it to run on your data or a high performance computing cluster. Download the <a href="https://raw.githubusercontent.com/gdgaiforscience/Antigravity/refs/heads/main/EXAMPLES/BIO/kmer_single.py">example script</a> or navigate through the repo.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> EXAMPLES/BIO</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>cd EXAMPLES<span class="op">/</span>BIO</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Ask about the code:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">What</span> does this code do<span class="pp">?</span> Can you make my code run faster on my laptop<span class="pp">?</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now parallelise it! And get the methodology for running it.</p>
@@ -186,8 +186,17 @@ unzip human-face-emotions.zip</code></pre>
 <h1>Final thoughts</h1>
 <ul>
 <li><p>To get the best results from an agentic IDE, it can be helpful to move from instructional prompting (“do this”) to architectural prompting (“build a system that functions like this”). You don’t have to be the developer or the project manager, rather think of yourself as the agent orchestration engineer!</p></li>
-<li><p>Be somewhat careful with permissions you give Antigravity. It is very powerful and it can delete things!</p></li>
-<li><p>Experiment and see what works best for you, and share it with the rest of us!</p></li>
+<li><p>Try using the Gemini chat interface to make your prompts more strategic, for example you can use this meta-prompt:</p></li>
+</ul>
+<pre><code># Role
+You are a Lead Prompt Engineer specializing in Google's Antigravity IDE and it's agentic capabilities. Your goal is to write a high-fidelity, instruction-dense prompt that will force Antigravity Agents to utilize their maximum reasoning depth and agentic research tools. 
+# Task
+Write a well-crafted and optimal prompt for input into the Antigravity so the returned output perfectly answers the following query: 
+"[INSERT QUESTION/TOPIC HERE]"</code></pre>
+<ul>
+<li><p>Read the generated artefacts and make changes that suit your needs</p></li>
+<li><p>Be somewhat careful with permissions you give Antigravity. It is very powerful and it can delete things! Browse through the options and think.</p></li>
+<li><p>Experiment and see what works best for you - and share it with the rest of us!</p></li>
 <li><p>Explore using different models for different phases of your workflow, some models are better at different tasks.</p></li>
 </ul>
 </section>
