@@ -141,6 +141,48 @@ Perform a systematic search across ArXiv, PubMed, and Semantic Scholar for 'Non-
 Read the draft grant proposal in grant_v1.docx. Cross-reference all technical claims in the 'Methodology' section with existing literature using search. Identify any 'Innovation Claims' that are actually already solved in recent 2025 publications. Check the budget section against the proposed computational requirements (e.g., GPU hours for training the specified model) and flag if the requested funds are insufficient. Suggest three peer-reviewed citations that would strengthen the 'Prior Art' section.
 ```
 
+## Example 8: Building a PINN Testbench with Antigravity
+
+This document outlines how to use **Antigravity** (your agentic coding assistant) to build a robust, modular Physics Informed Neural Network (PINN) framework from scratch.
+
+### 1. Defining the Core Architecture
+Start by asking Antigravity to create a modular structure. A professional PINN testbench requires separation of concerns:
+- **`data.py`**: Handles geometry and point sampling (Collocation, Boundary, Initial conditions).
+- **`model.py`**: Defines the neural network (MLP, ResNet, etc.).
+- **`solver.py`**: The "engine" that computes PDE residuals using automatic differentiation and manages the training loop.
+- **`utils.py`**: Visualization tools for 1D/2D solutions and error metrics.
+
+**Prompt Example:**
+> "Build a modular PINN framework in TensorFlow for solving the Burgers' equation. I need separate files for data handling, model definition, and a solver that uses GradientTape for physics loss."
+
+### 2. Implementing Advanced Features
+Once the basics are working, use Antigravity to implement state-of-the-art components.
+
+#### Linear Attention ResNet
+Ask Antigravity to implement a more complex architecture like a Linear Attention ResNet to handle global dependencies efficiently.
+- **Layers**: Multi-head or Linear Attention.
+- **Input Projection**: High-dimensional coordinate injection.
+
+#### Reliability & Logging
+Request features like **File Logging**, **TensorBoard** integration, and **Model Checkpointing** to ensure you never lose the best performing state.
+
+**Prompt Example:**
+> "Update the solver to support model checkpointing (save best) and TensorBoard logging. Also, add a separate evaluation script that loads a model and plots pointwise error heatmaps."
+
+### 3. Creating a Frontend Dashboard
+Wrap the framework in a **Streamlit** UI to make it interactive. This allows:
+- Launching training runs with varying hyperparameters.
+- Monitoring live logs and CPU/Resource usage.
+- Navigating and comparing past results.
+
+**Prompt Example:**
+> "Build a Streamlit dashboard that lets me launch 'train_burgers.py' in the background, monitor its logs live, and visualize the output plots from the results directory."
+
+### 4. Key Lessons from Antigravity's Workflow
+- **Iterative Refinement**: Start with a simple MLP and verify with unit tests before adding Attention or Dashboards.
+- **Environment Management**: Use Antigravity to set up dedicated Conda environments (`conda create -n pinn ...`) to avoid dependency conflicts.
+- **Verification**: Always ask Antigravity to create a `test_pinn.py` to ensure the mathematical logic (derivatives) is correct early on.
+
 # Final thoughts
 
 * To get the best results from an agentic IDE, it can be helpful to move from instructional prompting ("do this") to architectural prompting ("build a system that functions like this"). You don't have to be the developer or the project manager, rather think of yourself as the agent orchestration engineer!
