@@ -153,7 +153,9 @@ Start by asking Antigravity to create a modular structure. A professional PINN t
 - **`utils.py`**: Visualization tools for 1D/2D solutions and error metrics.
 
 **Prompt Example:**
-> "Build a modular PINN framework in TensorFlow for solving the Burgers' equation. I need separate files for data handling, model definition, and a solver that uses GradientTape for physics loss."
+```bash
+Build a modular PINN framework in TensorFlow for solving the Burgers' equation. I need separate files for data handling, model definition, and a solver that uses GradientTape for physics loss.
+```
 
 ### 2. Implementing Advanced Features
 Once the basics are working, use Antigravity to implement state-of-the-art components.
@@ -167,7 +169,9 @@ Ask Antigravity to implement a more complex architecture like a Linear Attention
 Request features like **File Logging**, **TensorBoard** integration, and **Model Checkpointing** to ensure you never lose the best performing state.
 
 **Prompt Example:**
-> "Update the solver to support model checkpointing (save best) and TensorBoard logging. Also, add a separate evaluation script that loads a model and plots pointwise error heatmaps."
+```bash
+Update the solver to support model checkpointing (save best) and TensorBoard logging. Also, add a separate evaluation script that loads a model and plots pointwise error heatmaps.
+```
 
 ### 3. Creating a Frontend Dashboard
 Wrap the framework in a **Streamlit** UI to make it interactive. This allows:
@@ -176,7 +180,9 @@ Wrap the framework in a **Streamlit** UI to make it interactive. This allows:
 - Navigating and comparing past results.
 
 **Prompt Example:**
-> "Build a Streamlit dashboard that lets me launch 'train_burgers.py' in the background, monitor its logs live, and visualize the output plots from the results directory."
+```bash
+Build a Streamlit dashboard that lets me launch 'train_burgers.py' in the background, monitor its logs live, and visualize the output plots from the results directory.
+```
 
 ### 4. Key Lessons from Antigravity's Workflow
 - **Iterative Refinement**: Start with a simple MLP and verify with unit tests before adding Attention or Dashboards.
