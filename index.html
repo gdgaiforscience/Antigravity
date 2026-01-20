@@ -189,6 +189,41 @@ unzip human-face-emotions.zip</code></pre>
 <h2 class="anchored" data-anchor-id="example-7-grant-writing-assitance">Example 7: Grant writing assitance</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Read</span> the draft grant proposal in grant_v1.docx. Cross-reference all technical claims in the <span class="st">'Methodology'</span> section with existing literature using search. Identify any <span class="st">'Innovation Claims'</span> that are actually already solved in recent 2025 publications. Check the budget section against the proposed computational requirements <span class="er">(</span><span class="ex">e.g.,</span> GPU hours for training the specified model<span class="kw">)</span> <span class="ex">and</span> flag if the requested funds are insufficient. Suggest three peer-reviewed citations that would strengthen the <span class="st">'Prior Art'</span> section.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
+<section id="example-8-building-a-pinn-testbench-with-antigravity" class="level2">
+<h2 class="anchored" data-anchor-id="example-8-building-a-pinn-testbench-with-antigravity">Example 8: Building a PINN Testbench with Antigravity</h2>
+<p>This document outlines how to use <strong>Antigravity</strong> (your agentic coding assistant) to build a robust, modular Physics Informed Neural Network (PINN) framework from scratch.</p>
+<section id="defining-the-core-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="defining-the-core-architecture">1. Defining the Core Architecture</h3>
+<p>Start by asking Antigravity to create a modular structure. A professional PINN testbench requires separation of concerns: - <strong><code>data.py</code></strong>: Handles geometry and point sampling (Collocation, Boundary, Initial conditions). - <strong><code>model.py</code></strong>: Defines the neural network (MLP, ResNet, etc.). - <strong><code>solver.py</code></strong>: The “engine” that computes PDE residuals using automatic differentiation and manages the training loop. - <strong><code>utils.py</code></strong>: Visualization tools for 1D/2D solutions and error metrics.</p>
+<p><strong>Prompt Example:</strong> &gt; “Build a modular PINN framework in TensorFlow for solving the Burgers’ equation. I need separate files for data handling, model definition, and a solver that uses GradientTape for physics loss.”</p>
+</section>
+<section id="implementing-advanced-features" class="level3">
+<h3 class="anchored" data-anchor-id="implementing-advanced-features">2. Implementing Advanced Features</h3>
+<p>Once the basics are working, use Antigravity to implement state-of-the-art components.</p>
+<section id="linear-attention-resnet" class="level4">
+<h4 class="anchored" data-anchor-id="linear-attention-resnet">Linear Attention ResNet</h4>
+<p>Ask Antigravity to implement a more complex architecture like a Linear Attention ResNet to handle global dependencies efficiently. - <strong>Layers</strong>: Multi-head or Linear Attention. - <strong>Input Projection</strong>: High-dimensional coordinate injection.</p>
+</section>
+<section id="reliability-logging" class="level4">
+<h4 class="anchored" data-anchor-id="reliability-logging">Reliability &amp; Logging</h4>
+<p>Request features like <strong>File Logging</strong>, <strong>TensorBoard</strong> integration, and <strong>Model Checkpointing</strong> to ensure you never lose the best performing state.</p>
+<p><strong>Prompt Example:</strong> &gt; “Update the solver to support model checkpointing (save best) and TensorBoard logging. Also, add a separate evaluation script that loads a model and plots pointwise error heatmaps.”</p>
+</section>
+</section>
+<section id="creating-a-frontend-dashboard" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-frontend-dashboard">3. Creating a Frontend Dashboard</h3>
+<p>Wrap the framework in a <strong>Streamlit</strong> UI to make it interactive. This allows: - Launching training runs with varying hyperparameters. - Monitoring live logs and CPU/Resource usage. - Navigating and comparing past results.</p>
+<p><strong>Prompt Example:</strong> &gt; “Build a Streamlit dashboard that lets me launch ‘train_burgers.py’ in the background, monitor its logs live, and visualize the output plots from the results directory.”</p>
+</section>
+<section id="key-lessons-from-antigravitys-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="key-lessons-from-antigravitys-workflow">4. Key Lessons from Antigravity’s Workflow</h3>
+<ul>
+<li><strong>Iterative Refinement</strong>: Start with a simple MLP and verify with unit tests before adding Attention or Dashboards.</li>
+<li><strong>Environment Management</strong>: Use Antigravity to set up dedicated Conda environments (<code>conda create -n pinn ...</code>) to avoid dependency conflicts.</li>
+<li><strong>Verification</strong>: Always ask Antigravity to create a <code>test_pinn.py</code> to ensure the mathematical logic (derivatives) is correct early on.</li>
+</ul>
+</section>
+</section>
 </section>
 <section id="final-thoughts" class="level1">
 <h1>Final thoughts</h1>
