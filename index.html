@@ -195,7 +195,8 @@ unzip human-face-emotions.zip</code></pre>
 <section id="defining-the-core-architecture" class="level3">
 <h3 class="anchored" data-anchor-id="defining-the-core-architecture">1. Defining the Core Architecture</h3>
 <p>Start by asking Antigravity to create a modular structure. A professional PINN testbench requires separation of concerns: - <strong><code>data.py</code></strong>: Handles geometry and point sampling (Collocation, Boundary, Initial conditions). - <strong><code>model.py</code></strong>: Defines the neural network (MLP, ResNet, etc.). - <strong><code>solver.py</code></strong>: The “engine” that computes PDE residuals using automatic differentiation and manages the training loop. - <strong><code>utils.py</code></strong>: Visualization tools for 1D/2D solutions and error metrics.</p>
-<p><strong>Prompt Example:</strong> &gt; “Build a modular PINN framework in TensorFlow for solving the Burgers’ equation. I need separate files for data handling, model definition, and a solver that uses GradientTape for physics loss.”</p>
+<p><strong>Prompt Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Build</span> a modular PINN framework in TensorFlow for solving the Burgers<span class="st">' equation. I need separate files for data handling, model definition, and a solver that uses GradientTape for physics loss.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="implementing-advanced-features" class="level3">
 <h3 class="anchored" data-anchor-id="implementing-advanced-features">2. Implementing Advanced Features</h3>
@@ -207,13 +208,15 @@ unzip human-face-emotions.zip</code></pre>
 <section id="reliability-logging" class="level4">
 <h4 class="anchored" data-anchor-id="reliability-logging">Reliability &amp; Logging</h4>
 <p>Request features like <strong>File Logging</strong>, <strong>TensorBoard</strong> integration, and <strong>Model Checkpointing</strong> to ensure you never lose the best performing state.</p>
-<p><strong>Prompt Example:</strong> &gt; “Update the solver to support model checkpointing (save best) and TensorBoard logging. Also, add a separate evaluation script that loads a model and plots pointwise error heatmaps.”</p>
+<p><strong>Prompt Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Update</span> the solver to support model checkpointing <span class="er">(</span><span class="ex">save</span> best<span class="kw">)</span> <span class="ex">and</span> TensorBoard logging. Also, add a separate evaluation script that loads a model and plots pointwise error heatmaps.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="creating-a-frontend-dashboard" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-frontend-dashboard">3. Creating a Frontend Dashboard</h3>
 <p>Wrap the framework in a <strong>Streamlit</strong> UI to make it interactive. This allows: - Launching training runs with varying hyperparameters. - Monitoring live logs and CPU/Resource usage. - Navigating and comparing past results.</p>
-<p><strong>Prompt Example:</strong> &gt; “Build a Streamlit dashboard that lets me launch ‘train_burgers.py’ in the background, monitor its logs live, and visualize the output plots from the results directory.”</p>
+<p><strong>Prompt Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Build</span> a Streamlit dashboard that lets me launch <span class="st">'train_burgers.py'</span> in the background, monitor its logs live, and visualize the output plots from the results directory.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="key-lessons-from-antigravitys-workflow" class="level3">
 <h3 class="anchored" data-anchor-id="key-lessons-from-antigravitys-workflow">4. Key Lessons from Antigravity’s Workflow</h3>
