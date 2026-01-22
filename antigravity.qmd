@@ -20,6 +20,10 @@ Learn how to use Antigravity to:
 * Refactor code to execute efficiently on HPC environments or similar.
 * Produce machine learning pipelines that immediately fit your research problems.
 
+## Watch the recording!
+
+Watch Rahul Sundar present the below content live: https://youtu.be/34dS94ONuDM
+
 ![ ](./aiforsci.png)
 
 This workshop is part of the [GDG AI for Science](https://gdg.community.dev/events/details/google-gdg-ai-for-science-india-presents-googles-antigravity-accelerating-research-and-scientific-pipelines) workshop series. Join the community (in [Australia](https://gdg.community.dev/gdg-ai-for-science-australia/), [Korea](https://gdg.community.dev/gdg-ai-for-science-korea/), [Japan](https://gdg.community.dev/gdg-ai-for-science-japan), or [India](https://gdg.community.dev/gdg-ai-for-science-india/)) for talks, events, collaborations and more.
