@@ -4,6 +4,7 @@ format:
   html:
     code-overflow: wrap
     css: styles.css
+    google-analytics: "G-Z7E5C7LLKG"
 resources:        
   - styles.css
 output-file: index.html
