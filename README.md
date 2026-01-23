@@ -25,8 +25,8 @@ git push
 You must also make a `gh-pages` branch and publish the quarto pages to it locally first. Probably better ways to do this:
 ```
 git checkout -n gh-pages
-quarto publish gh-pages antigravity.qmd 
-git push origin gh-pages
+quarto publish gh-pages
+git push origin gh-pages 
 git checkout main
 ```
 
@@ -60,5 +60,5 @@ jobs:
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
-          path: antigravity.qmd
+          path: .
 ```
