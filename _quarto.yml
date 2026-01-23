@@ -1,13 +1,10 @@
-project:
-  resources:
-    - styles.css
-
 website:
-  cookie-consent:
-    type: express
-    style: headline
-    palette: dark
   google-analytics:
     tracking-id: "G-Z7E5C7LLKG"
     storage: none
     anonymize-ip: true
+project:
+  resources:
+    - styles.css
+
+
