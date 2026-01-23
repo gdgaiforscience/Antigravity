@@ -1,10 +1,16 @@
+project:
+  type: website
+  resources:
+    - styles.css
+
 website:
+  title: "Antigravity for Science" # Moved title here (optional, commonly used for navbar)
   google-analytics:
     tracking-id: "G-Z7E5C7LLKG"
     storage: none
     anonymize-ip: true
-project:
-  resources:
-    - styles.css
 
-
+format:
+  html:
+    css: styles.css
+    code-overflow: wrap
