@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Antigravity for Science",
+    "section": "",
+    "text": "Google’s new code editor, Antigravity, is an AI-assisted IDE (Integrated Development Environment) with native agentic and generative AI capabilities built into the platform to rapidly accelerate computational and data driven development and scientific research. Antigravity is built on top of the Visual Studio Code editor for a familiar but accelerated user experience. The embedded agentic assistance allows users to spend more time solving research problems and less time debugging problematic code. This workshop is designed for researchers of all coding skill levels. We will walk through simple, research-grounded examples to help you fit the Antigravity framework immediately to your own projects.\nLearn how to use Antigravity to:"
+  },
+  {
+    "objectID": "index.html#watch-the-recording",
+    "href": "index.html#watch-the-recording",
+    "title": "Antigravity for Science",
+    "section": "Watch the recording!",
+    "text": "Watch the recording!\nWatch Rahul Sundar present the below content live: https://youtu.be/34dS94ONuDM\n\nThis workshop is part of the GDG AI for Science workshop series. Join the community (in Australia, Korea, Japan, or India) for talks, events, collaborations and more."
+  },
+  {
+    "objectID": "index.html#target-audience",
+    "href": "index.html#target-audience",
+    "title": "Antigravity for Science",
+    "section": "Target Audience",
+    "text": "Target Audience\nThis workshop is aimed at anyone that writes code for scientific research including:\n\nResearch students (undergrad, masters, PhD, etc)\nResearchers requiring computational tools\nData Scientists and professionals supporting scientific projects"
+  },
+  {
+    "objectID": "index.html#requirements",
+    "href": "index.html#requirements",
+    "title": "Antigravity for Science",
+    "section": "Requirements",
+    "text": "Requirements\nBefore the session please download and install Antigravity for your system by following the instructions here: https://antigravity.google/download\nPrerequisites:\n\nBasic coding knowledge will be helpful.\nA motivation to experiment\nFamiliarity with Visual Studio Code editor will be helpful otherwise this will be a crash-course"
+  },
+  {
+    "objectID": "index.html#example-1-first-prompt",
+    "href": "index.html#example-1-first-prompt",
+    "title": "Antigravity for Science",
+    "section": "Example 1: First prompt",
+    "text": "Example 1: First prompt\nYou can immediately get started with a prompt in the Agent Manager sidebar or window\nYour goal is to show if temperature has changed in Sydney, Australia.\nKeep the conversation going now it has developed more context:\nYour goal is to prove this using data and code\nMake sure you have tools (like Python) installed and the correct environments are being used. Put comments into the generated artefacts to give it helpful context hints:\nrun the tests in conda environment oztemp\nKeep the agent working with more complex tasks:\nPlease extend this to make an animated heatmap of Australia's Annual Mean Max Temperature"
+  },
+  {
+    "objectID": "index.html#example-2-working-with-your-data",
+    "href": "index.html#example-2-working-with-your-data",
+    "title": "Antigravity for Science",
+    "section": "Example 2: Working with your data",
+    "text": "Example 2: Working with your data\nWhilst you can start from scratch to develop a complete workflow, likely you will already have some bones of a repo. Let’s create a new project folder with some data and get Antigravity to work with that context:\nmkdir demofaces\ncd demofaces\ncurl -L -o human-face-emotions.zip\\  https://www.kaggle.com/api/v1/datasets/download/samithsachidanandan/human-face-emotions\nunzip human-face-emotions.zip\nNow give it a prompt:\nWrite a TensorFlow model to classify the images of facial expressions in the Data folder into 5 classes based on the sub-folder names (Angry, Fear, Happy, Sad, Surprise)"
+  },
+  {
+    "objectID": "index.html#example-3-updating-existing-code",
+    "href": "index.html#example-3-updating-existing-code",
+    "title": "Antigravity for Science",
+    "section": "Example 3: Updating existing code",
+    "text": "Example 3: Updating existing code\nYou may have been given some code or pulled it from a paper. You need to refactor it to run on your data or a high performance computing cluster. Download the example script or navigate through the repo.\ncd EXAMPLES/BIO\nAsk about the code:\nWhat does this code do? Can you make my code run faster on my laptop?\nNow parallelise it! And get the methodology for running it.\nUse the conda environment \"bio\" for any python processing\nI have been given access to the NCI HPC, how do I run this on many fastq files on that machine?"
+  },
+  {
+    "objectID": "index.html#example-4-reproduce-results",
+    "href": "index.html#example-4-reproduce-results",
+    "title": "Antigravity for Science",
+    "section": "Example 4: Reproduce results",
+    "text": "Example 4: Reproduce results\nAntigravity has a bunch of built in tools that will work for you. In this example we will ask it to recreate a figure from a paper. You could be helpful and put the pdf or figure into a file, or make it do all the work with a prompt like:\nRecreate the Fig 1 from the paper at https://www.nature.com/articles/s41586-025-09840-z"
+  },
+  {
+    "objectID": "index.html#example-5-multi-agent-orchestration",
+    "href": "index.html#example-5-multi-agent-orchestration",
+    "title": "Antigravity for Science",
+    "section": "Example 5: Multi-agent orchestration",
+    "text": "Example 5: Multi-agent orchestration\nFrom the Agent Manager you can launch multiple agents to work on different parts of a problem concurrently. But let’s hand complete control to the Agent, set it running and go and get a cup of coffee. Start new conversation in…\nPrompt 1:\nI want to prove or disprove the correlation between earthquakes and Lunar cycles. Write a literature review with extensive referencing on this topic.\nPrompt 2:\nPull the required data and setup the project to to prove or disprove the correlation between earthquakes and Lunar cycles. \nPrompt 3:\nWrite the code to prove or disprove the correlation between earthquakes and Lunar cycles.\nPrompt 4:\nWrite the conclusion based on the data and review about the link between Earthquakes and Lunar cycles"
+  },
+  {
+    "objectID": "index.html#example-6-targeted-literature-review-and-summary",
+    "href": "index.html#example-6-targeted-literature-review-and-summary",
+    "title": "Antigravity for Science",
+    "section": "Example 6: Targeted literature review and summary",
+    "text": "Example 6: Targeted literature review and summary\nPerform a systematic search across ArXiv, PubMed, and Semantic Scholar for 'Non-pharmacological interventions for Neuroplasticity (2023-2026)'. Extract the N-values, p-values, and effect sizes from the top 40 relevant papers. Use Python to aggregate this data into a structured CSV. Identify and highlight 'Evidence Contradictions' where two or more papers report conflicting results for the same intervention. Generate a summary identifying the 'consensus gap' and suggest three specific hypotheses for future experimental validation."
+  },
+  {
+    "objectID": "index.html#example-7-grant-writing-assitance",
+    "href": "index.html#example-7-grant-writing-assitance",
+    "title": "Antigravity for Science",
+    "section": "Example 7: Grant writing assitance",
+    "text": "Example 7: Grant writing assitance\nRead the draft grant proposal in grant_v1.docx. Cross-reference all technical claims in the 'Methodology' section with existing literature using search. Identify any 'Innovation Claims' that are actually already solved in recent 2025 publications. Check the budget section against the proposed computational requirements (e.g., GPU hours for training the specified model) and flag if the requested funds are insufficient. Suggest three peer-reviewed citations that would strengthen the 'Prior Art' section."
+  },
+  {
+    "objectID": "index.html#example-8-building-a-pinn-testbench-with-antigravity",
+    "href": "index.html#example-8-building-a-pinn-testbench-with-antigravity",
+    "title": "Antigravity for Science",
+    "section": "Example 8: Building a PINN Testbench with Antigravity",
+    "text": "Example 8: Building a PINN Testbench with Antigravity\nThis document outlines how to use Antigravity (your agentic coding assistant) to build a robust, modular Physics Informed Neural Network (PINN) framework from scratch.\n\n1. Defining the Core Architecture\nStart by asking Antigravity to create a modular structure. A professional PINN testbench requires separation of concerns: - data.py: Handles geometry and point sampling (Collocation, Boundary, Initial conditions). - model.py: Defines the neural network (MLP, ResNet, etc.). - solver.py: The “engine” that computes PDE residuals using automatic differentiation and manages the training loop. - utils.py: Visualization tools for 1D/2D solutions and error metrics.\nPrompt Example:\nBuild a modular PINN framework in TensorFlow for solving the Burgers' equation. I need separate files for data handling, model definition, and a solver that uses GradientTape for physics loss.\n\n\n2. Implementing Advanced Features\nOnce the basics are working, use Antigravity to implement state-of-the-art components.\n\nLinear Attention ResNet\nAsk Antigravity to implement a more complex architecture like a Linear Attention ResNet to handle global dependencies efficiently. - Layers: Multi-head or Linear Attention. - Input Projection: High-dimensional coordinate injection.\n\n\nReliability & Logging\nRequest features like File Logging, TensorBoard integration, and Model Checkpointing to ensure you never lose the best performing state.\nPrompt Example:\nUpdate the solver to support model checkpointing (save best) and TensorBoard logging. Also, add a separate evaluation script that loads a model and plots pointwise error heatmaps.\n\n\n\n3. Creating a Frontend Dashboard\nWrap the framework in a Streamlit UI to make it interactive. This allows: - Launching training runs with varying hyperparameters. - Monitoring live logs and CPU/Resource usage. - Navigating and comparing past results.\nPrompt Example:\nBuild a Streamlit dashboard that lets me launch 'train_burgers.py' in the background, monitor its logs live, and visualize the output plots from the results directory.\n\n\n4. Key Lessons from Antigravity’s Workflow\n\nIterative Refinement: Start with a simple MLP and verify with unit tests before adding Attention or Dashboards.\nEnvironment Management: Use Antigravity to set up dedicated Conda environments (conda create -n pinn ...) to avoid dependency conflicts.\nVerification: Always ask Antigravity to create a test_pinn.py to ensure the mathematical logic (derivatives) is correct early on."
+  }
+]
