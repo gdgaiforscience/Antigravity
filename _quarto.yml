@@ -9,6 +9,8 @@ website:
     tracking-id: "G-Z7E5C7LLKG"
     storage: none
     anonymize-ip: true
+  repo-url: https://github.com/gdgaiforscience/Antigravity
+  repo-actions: [edit]
 
 format:
   html:
