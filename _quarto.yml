@@ -7,7 +7,7 @@ website:
   title: "Antigravity for Science" # Moved title here (optional, commonly used for navbar)
   google-analytics:
     tracking-id: "G-Z7E5C7LLKG"
-    storage: none
+    storage: cookies
     anonymize-ip: true
   repo-url: https://github.com/gdgaiforscience/Antigravity
   repo-actions: [edit]
